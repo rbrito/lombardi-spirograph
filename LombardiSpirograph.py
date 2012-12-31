@@ -9,10 +9,12 @@ For usage information type "python LombardiSpirography.py"
 without any additional arguments.
 """
 
-from pyx import canvas, path
-from optparse import OptionParser
-from math import *
 import sys
+
+from math import *
+from optparse import OptionParser
+
+from pyx import canvas, path
 
 # ============================================================
 #   Pre-determined graphs by name
