@@ -11,7 +11,7 @@ without any additional arguments.
 
 import sys
 
-from math import *
+from math import cos, e, pi, sin, tan
 from optparse import OptionParser
 
 from pyx import canvas, path
