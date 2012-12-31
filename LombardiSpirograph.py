@@ -14,8 +14,6 @@ import sys
 from math import cos, e, pi, sin, tan
 from optparse import OptionParser
 
-from pyx import canvas, path
-
 # ============================================================
 #   Pre-determined graphs by name
 # ============================================================
