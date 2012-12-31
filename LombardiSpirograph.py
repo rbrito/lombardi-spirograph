@@ -338,11 +338,15 @@ for i in range(levels):
 # ============================================================
 
 def cot(x):
-    """Cotangent(x). Why is this not in math?"""
+    """
+    Cotangent(x). Why is this not in math?
+    """
     return tan(pi/2-x)
 
 def distance(p,q):
-    """Euclidean distance from p to q"""
+    """
+    Euclidean distance from p to q.
+    """
     return ((p.real - q.real)**2 + (p.imag - q.imag)**2)**0.5
 
 radius = [0]*levels     # how far from origin to make each layer
@@ -400,13 +404,17 @@ def rotations(level):
             for i in range(int(stagger[level]),2*symmetry,2)]
 
 def vertices():
-    """Return sequence of complex numbers representing vertex positions"""
+    """
+    Return sequence of complex numbers representing vertex positions.
+    """
     for i in range(levels):
         for r in rotations(i):
             yield radius[i]*r
 
 def segments():
-    """Return sequence of vertex pairs to be connected by line segments"""
+    """
+    Return sequence of vertex pairs to be connected by line segments.
+    """
     if circulant[0] and circulant[0][0]*2 == symmetry:
         # cross-edges in center
         for i in range(circulant[0][0]):
@@ -436,8 +444,10 @@ def segments():
 maxRadius = radius[-1]
 
 def circulants():
-    """Return sequence of all arcs within a single level
-    and compute maxRadius as we do"""
+    """
+    Return sequence of all arcs within a single level and compute maxRadius
+    as we do.
+    """
     global maxRadius
     for i in range(levels):
         if central[i]:
@@ -474,7 +484,9 @@ def circulants():
                     yield (p*r,q*r,-rad)
 
 def connectors():
-    """Return sequence of all arcs from one level to the next"""
+    """
+    Return sequence of all arcs from one level to the next.
+    """
     for i in range(levels):
         if connector[i] and not straightConnector[i]:
             p = radius[i]
@@ -489,7 +501,9 @@ def connectors():
                     yield q*r/poq,p*r,-conrad[i]
 
 def arcs():
-    """Return sequence of vertex,vertex,radius triples"""
+    """
+    Return sequence of vertex, vertex, radius triples.
+    """
     for arc in circulants():
         yield arc
     for arc in connectors():
@@ -516,7 +530,9 @@ print '''<?xml version="1.0" standalone="no"?>
   (2*bbox+1,2*bbox+1,0,0,2*bbox+1,2*bbox+1)
 
 def place(p):
-    """Convert unit-free complex to pixel-scaled real coordinates"""
+    """
+    Convert unit-free complex to pixel-scaled real coordinates.
+    """
     return p.real*scale+bbox+1,p.imag*scale+bbox+1
 
 print '  <g style="fill:none; stroke:black">'
