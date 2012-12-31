@@ -92,28 +92,28 @@ namedGraphs = {
 
 parser = OptionParser()
 
-parser.add_option("-f","--format", dest="show_format", action="store_true",
+parser.add_option("-f", "--format", dest="show_format", action="store_true",
                   help = "describe the graph input format and exit")
 
-parser.add_option("-n","--names", dest="show_names", action="store_true",
+parser.add_option("-n", "--names", dest="show_names", action="store_true",
                   help = "show a description of graph names and exit")
 
-parser.add_option("-s","--scale", dest="scale", action="store",
+parser.add_option("-s", "--scale", dest="scale", action="store",
                   type="float", default="1.0",
                   help = "size of overall drawing relative to default")
 
-parser.add_option("-r","--radius",dest="radius", action="store",
+parser.add_option("-r", "--radius", dest="radius", action="store",
                   type="float", default="1.0",
                   help = "radius of vertices relative to default")
 
-parser.add_option("-c","--color",dest="color", action="store",
+parser.add_option("-c", "--color", dest="color", action="store",
                   type="string", default="red",
                   help = "vertex color (e.g. blue or 76B3DF)")
 
-parser.add_option("-o","--outline", dest="outline", action="store_true",
+parser.add_option("-o", "--outline", dest="outline", action="store_true",
                   help = "avoid drawing outlines around vertices")
 
-options,args = parser.parse_args()
+options, args = parser.parse_args()
 
 def abort(message):
     print >> sys.stderr, message
