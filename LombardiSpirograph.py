@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 LombardiSpirograph - draw rotationally symmetric drawings in Lombardi style
 David Eppstein, UC Irvine, March 2010
