@@ -1,4 +1,5 @@
-"""LombardiSpirograph - draw rotationally symmetric drawings in Lombardi style
+"""
+LombardiSpirograph - draw rotationally symmetric drawings in Lombardi style
 David Eppstein, UC Irvine, March 2010
 
 For usage information type "python LombardiSpirography.py"
@@ -138,14 +139,18 @@ exactly half the circle.
 The numeric part of a word describes the connection from one layer to the
 next layer. If this number is zero, then vertices in the inner layer are
 connected to vertices in the next layer radially by straight line segments.
-Otherwise, pairs of vertices from the inner layer, the given number of
-steps apart, are connected to single vertices in the outer layer. A nonzero number written with a leading zero (e.g. "01" in place of "1") indicates that, as well as connections with the given number of steps, there should also be a radial connection from the inner layer to the next layer that has vertices
+Otherwise, pairs of vertices from the inner layer, the given number of steps
+apart, are connected to single vertices in the outer layer. A nonzero number
+written with a leading zero (e.g. "01" in place of "1") indicates that, as
+well as connections with the given number of steps, there should also be a
+radial connection from the inner layer to the next layer that has vertices
 aligned with it; this may not necessarily be the layer immediately outward.
 
 In the innermost layer, the special word "x" may be used to indicate that
-the layer consists of a single vertex at the center of the drawing. "x0" indicates that this central vertex is connected both to every vertex in
-the adjacent layer and also to every vertex in the next layer that is
-staggered with respect to the inner two layers.
+the layer consists of a single vertex at the center of the drawing. "x0"
+indicates that this central vertex is connected both to every vertex in the
+adjacent layer and also to every vertex in the next layer that is staggered
+with respect to the inner two layers.
 '''
     sys.exit(0)
 
