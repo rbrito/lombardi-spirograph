@@ -258,8 +258,8 @@ for c in circulant:
         threshold = symmetry - 1
 
 for offset in connector:
-     if offset >= symmetry:
-#    if offset * 2 > symmetry:
+    if offset >= symmetry:
+#   if offset * 2 > symmetry:
         abort("Connector specification goes too far")
 
 # ============================================================
