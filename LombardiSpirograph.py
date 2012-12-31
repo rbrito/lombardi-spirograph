@@ -9,7 +9,7 @@ For usage information type "python LombardiSpirography.py"
 without any additional arguments.
 """
 
-from pyx import canvas, path, color
+from pyx import canvas, path
 from optparse import OptionParser
 from math import *
 import sys
